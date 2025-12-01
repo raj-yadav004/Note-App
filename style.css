@@ -1,25 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
 
-body{
-background: #6454C6;
-background: linear-gradient(315deg, #6454C6, #0E919C);
-
-}
-#container{
-   width: 100%;
-   min-height: 100vh;
-   padding-top: 4%;
-   padding-left: 10%;
-   
+body {
+    background: #6454C6;
+    background: linear-gradient(315deg, #6454C6, #0E919C);
+    min-height: 100dvh;
+    min-height: 100vh;
 }
 
-#container h1{
+#container {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: max(4%, env(safe-area-inset-top));
+    padding-left: 10%;
+    padding-right: 2%;
+
+}
+
+#container h1 {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -29,11 +32,12 @@ background: linear-gradient(315deg, #6454C6, #0E919C);
 
 
 }
-#container img{
+
+#container img {
     width: 40px;
 }
 
-#container button{
+#container button {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -41,18 +45,21 @@ background: linear-gradient(315deg, #6454C6, #0E919C);
     color: white;
     font-weight: 500;
     background-color: purple;
-    padding: 0.4rem 1rem ;
+    padding: 0.4rem 1rem;
     border-radius: 2rem;
     border: none;
     margin-top: 1rem;
 }
-#container button img{
+
+#container button img {
     width: 22px;
 }
-#notes-container{
+
+#notes-container {
     margin-top: 2rem;
 }
-.input-box{
+
+.input-box {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -65,41 +72,77 @@ background: linear-gradient(315deg, #6454C6, #0E919C);
     padding: 1rem;
     margin: 1.3rem 0;
 
-    
+
 }
+
 #notes-container p img {
-    
+
     position: absolute;
     width: 35px;
     right: 15px;
     bottom: 15px;
     cursor: pointer;
-    
+
 }
+
 @media (max-width:600px) {
-    body{
+    body {
         position: relative;
-    }
-    #btn{
-        position: absolute;
-        bottom: 2rem;
-        left: 1.5rem;
-        z-index: 12;
-        
-    }
-    .clear-all-notes{
-        position: absolute;
-        bottom: 2rem;
-        right: 1.5rem; 
-        z-index: 12;
+        padding-bottom: max(6rem, env(safe-area-inset-bottom) + 5rem);
 
     }
-    #container{
+
+    #btn {
+        position: fixed;
+        bottom: max(1.5rem, env(safe-area-inset-bottom) + 1rem);
+        left: max(1.5rem, env(safe-area-inset-left) + 1rem);
+        z-index: 100;
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .clear-all-notes {
+        position: fixed;
+        bottom: max(1.5rem, env(safe-area-inset-bottom) + 1rem);
+        right: max(1.5rem, env(safe-area-inset-right) + 1rem);
+        z-index: 100;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+
+    }
+
+    #container h1 {
+        margin: 0 auto;
+        font-size: 1.5rem;
+
+        margin-top: 0.5rem;
+    }
+
+    #container {
         display: flex;
         flex-direction: column;
         padding: 1rem 2rem;
     }
-    #container h1{
-        margin: aut;
+
+    #notes-container {
+        margin-top: 1.5rem;
+        padding-bottom: 2rem;
+
     }
+
+    .input-box {
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding: 0.75rem;
+        margin: 1rem 0;
+    }
+
+    #notes-container p img {
+        width: 28px;
+        right: 12px;
+        bottom: 12px;
+    }
+
 }
