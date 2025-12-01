@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+background: #6454C6;
+background: linear-gradient(315deg, #6454C6, #0E919C);
+
+}
+#container{
+   width: 100%;
+   min-height: 100vh;
+   padding-top: 4%;
+   padding-left: 10%;
+   
+}
+
+#container h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+
+    font-weight: 600;
+
+
+}
+#container img{
+    width: 40px;
+}
+
+#container button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    background-color: purple;
+    padding: 0.4rem 1rem ;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 1rem;
+}
+#container button img{
+    width: 22px;
+}
+#notes-container{
+    margin-top: 2rem;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1.3rem 0;
+
+    
+}
+#notes-container p img {
+    
+    position: absolute;
+    width: 35px;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    
+}
+@media (max-width:600px) {
+    body{
+        position: relative;
+    }
+    #btn{
+        position: absolute;
+        bottom: 2rem;
+        left: 1.5rem;
+        z-index: 12;
+        
+    }
+    .clear-all-notes{
+        position: absolute;
+        bottom: 2rem;
+        right: 1.5rem; 
+        z-index: 12;
+
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+    #container h1{
+        margin: aut;
+    }
+}
