@@ -5,7 +5,7 @@
     <strong>A simple, efficient, and responsive note-taking application.</strong>
     <br />
     <br />
-    <a href="https://raj-yadav004.github.io/Note-App/"><strong>🔴 View Live Demo</strong></a>
+    <a href="note-app-ivory-delta.vercel.app"><strong>🔴 View Live Demo</strong></a>
     <br />
     <br />
     <a href="https://github.com/raj-yadav004/Note-App/issues">Report Bug</a>
